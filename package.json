@@ -21,8 +21,7 @@
         "eject": "react-scripts eject"
     },
     "eslintConfig": {
-        "extends": "react-app",
-        "ecmaVersion": "2015"
+        "extends": "react-app"
     },
 
     "browserslist": {

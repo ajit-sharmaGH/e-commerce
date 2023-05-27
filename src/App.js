@@ -1,11 +1,15 @@
-import "./App.css";
-import { LandingPage } from "./components/home/landing-page";
+import "./index.css"
+
+import { Home } from "./components/home/landing-page";
+import { ProductContextProvider } from "./context/productContext";
 
 function App() {
   return (
-    <div>
-      <LandingPage/>
-    </div>
+    <>
+      <ProductContextProvider>
+        <Home />
+      </ProductContextProvider>
+    </>
   );
 }
 

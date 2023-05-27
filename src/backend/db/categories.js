@@ -8,20 +8,31 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+    categoryName: "Men",
+    description: "Men Collection",
+    categoryImage:
+      "https://i.ibb.co/tLDzkxW/Mens-suits-in-different-colors-hanging-on-hanger-in-a-retail-clothes-store-close-up.jpg",
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    categoryName: "Women",
+    description: "Women Collection",
+    categoryImage:
+      "https://i.ibb.co/XD8q0Bj/Side-view-of-calm-young-adult-girl-standing-near-wardrobe-choosing-stylish-clothes-compared-trendy-o.jpg",
+  },
+
+  {
+    _id: uuid(),
+    categoryName: "Kids",
+    description: "Kids Collection",
+    categoryImage:
+      "https://i.ibb.co/LdG2zYs/Cute-happy-little-girl-embracing-teddy-bear-Pretty-female-kid-at-home-sitting-on-sofa-with-her-favor.jpg",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    categoryName: "Gadgets",
+    description: "Gadgets Collection",
+    categoryImage:
+      "https://i.ibb.co/W2cSP4y/Several-smart-phones-with-large-touch-screens-and-two-digital-tablets-are-placed-in-a-pile-All-brand.jpg",
   },
 ];
