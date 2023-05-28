@@ -10,8 +10,11 @@
         "mockman-js": "^1.1.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-icons": "^4.8.0",
         "react-router-dom": "^6.11.2",
         "react-scripts": "5.0.1",
+        "react-scroll": "^1.8.9",
+        "react-scroll-to-element": "^0.2.0",
         "uuid": "^8.3.2"
     },
     "scripts": {
@@ -23,7 +26,6 @@
     "eslintConfig": {
         "extends": "react-app"
     },
-
     "browserslist": {
         "production": [
             ">0.2%",
