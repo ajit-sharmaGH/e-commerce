@@ -8,4 +8,40 @@
              return {...prevState };
      }
  };
- export { productReducer }
+
+ const cartReducer = (prevState, { type, payload }) => {
+    switch(type){
+
+    case "FILTER_CATEGORY":
+       return {
+         ...prevState,
+         filter: {
+           ...prevState.filter,
+           category: prevState.filter.category.find((name) => name === payload)
+             ? prevState.filter.category.filter((name) => name !== payload)
+             : [...prevState.filter.category, payload],
+         }
+       }
+       case "FILTER_RATING":
+      return {
+        ...prevState,
+        filter: { ...prevState.filter, userRating: payload },
+      };
+
+      case "FILTER_SEARCH_QUERY":
+        return {
+          ...prevState,
+          filter: { ...prevState.filter, searchQuery: payload },
+        };
+
+    default:
+       return prevState;
+    }
+   }
+
+
+
+ 
+    export { productReducer, cartReducer }
+
+     

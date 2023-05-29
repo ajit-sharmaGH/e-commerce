@@ -1,0 +1,12 @@
+.product-image {
+    display: flex;
+    flex-wrap: wrap;
+    height: 20rem;
+    width: 30rem;
+}
+
+
+/* .product-card-container {
+    display: flex;
+    flex-wrap: wrap;
+} */

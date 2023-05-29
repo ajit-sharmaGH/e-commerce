@@ -8,14 +8,14 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "Men",
+    categoryName: "menWear",
     description: "Men Collection",
     categoryImage:
       "https://i.ibb.co/tLDzkxW/Mens-suits-in-different-colors-hanging-on-hanger-in-a-retail-clothes-store-close-up.jpg",
   },
   {
     _id: uuid(),
-    categoryName: "Women",
+    categoryName: "womenWear",
     description: "Women Collection",
     categoryImage:
       "https://i.ibb.co/XD8q0Bj/Side-view-of-calm-young-adult-girl-standing-near-wardrobe-choosing-stylish-clothes-compared-trendy-o.jpg",
@@ -23,7 +23,7 @@ export const categories = [
 
   {
     _id: uuid(),
-    categoryName: "Kids",
+    categoryName: "kidsWear",
     description: "Kids Collection",
     categoryImage:
       "https://i.ibb.co/LdG2zYs/Cute-happy-little-girl-embracing-teddy-bear-Pretty-female-kid-at-home-sitting-on-sofa-with-her-favor.jpg",
