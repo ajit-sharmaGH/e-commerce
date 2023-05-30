@@ -10,7 +10,6 @@ export const products = [
     _id: uuid(),
     title: "Headphone",
     author: "",
-    inStock:true,
     discountPrice: 100,
     originalPrice: 500,
     productImage:
