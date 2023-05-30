@@ -10,6 +10,7 @@ export const products = [
     _id: uuid(),
     title: "Headphone",
     author: "",
+    inStock:true,
     discountPrice: 100,
     originalPrice: 500,
     productImage:
@@ -18,8 +19,10 @@ export const products = [
     categoryName: "gadgets",
     ratingSign: "⭐⭐⭐",
     rating: 3.5,
+    trending:true,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true,
   },
   {
     _id: uuid(),
@@ -35,6 +38,7 @@ export const products = [
     rating: 4.5,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true,
   },
   {
     _id: uuid(),
@@ -46,10 +50,13 @@ export const products = [
       "https://i.ibb.co/DgNjp7D/woman-accessories-closeup-shiny-gold-women-wristwatch.jpg",
     productDescription: ` `,
     categoryName: "gadgets",
+   
     ratingSign: "⭐⭐",
     rating: 2.5,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true
+    
   },
   {
     _id: uuid(),
@@ -65,6 +72,7 @@ export const products = [
     rating: 3.5,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true,
   },
   {
     _id: uuid(),
@@ -75,11 +83,15 @@ export const products = [
     productImage:
       "https://i.ibb.co/tLDzkxW/Mens-suits-in-different-colors-hanging-on-hanger-in-a-retail-clothes-store-close-up.jpg",
     productDescription: ` `,
+    trending:true,
+
     categoryName: "menWear",
     ratingSign: "⭐⭐",
     rating: 2.5,
     wishlistAdded: false,
-    cartAdded: false,
+    cartAdded: false,   
+     inStock:true,
+
   },
   {
     _id: uuid(),
@@ -94,23 +106,11 @@ export const products = [
     ratingSign: "⭐⭐⭐⭐",
     rating: 4.5,
     wishlistAdded: false,
-    cartAdded: false,
+    cartAdded: false,  
+      inStock:false,
+
   },
-  {
-    _id: uuid(),
-    title: "Shoes",
-    author: "",
-    discountPrice: 100,
-    originalPrice: 5000,
-    productImage:
-      "https://i.ibb.co/gdH00y9/Indian-Made-Men-s-Shoe-Isolated-on-Gray.jpg",
-    productDescription: ` `,
-    categoryName: "menWear",
-    ratingSign: "⭐⭐⭐",
-    rating: 3.5,
-    wishlistAdded: false,
-    cartAdded: false,
-  },
+  
   {
     _id: uuid(),
     title: "Clothes",
@@ -125,6 +125,8 @@ export const products = [
     rating: 4.5,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true,
+
   },
   {
     _id: uuid(),
@@ -140,6 +142,8 @@ export const products = [
     rating: 1.5,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true,
+
   },
   {
     _id: uuid(),
@@ -155,6 +159,8 @@ export const products = [
     rating: 4.9,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true,
+
   },
 
   {
@@ -171,6 +177,8 @@ export const products = [
     rating: 2.5,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true,
+
   },
   {
     _id: uuid(),
@@ -185,6 +193,8 @@ export const products = [
     rating: 1.5,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true,
+
   },
   {
     _id: uuid(),
@@ -200,6 +210,8 @@ export const products = [
     rating: 3.5,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true,
+
   },
   {
     _id: uuid(),
@@ -214,5 +226,23 @@ export const products = [
     rating: 2.5,
     wishlistAdded: false,
     cartAdded: false,
+    inStock:true,
+
   },
+  {
+    _id: uuid(),
+    title: "Shoes",
+    author: "",
+    discountPrice: 100,
+    originalPrice: 5000,
+    productImage:"https://i.ibb.co/gdH00y9/Indian-Made-Men-s-Shoe-Isolated-on-Gray.jpg",
+    categoryName: "menWear",
+    ratingSign: "⭐⭐⭐",
+    rating: 3.5,
+    trending:true,
+    inStock:true,
+
+  },
+ 
+ 
 ];

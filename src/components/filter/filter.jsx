@@ -8,6 +8,7 @@ const FilterComponent = () => {
         addFilterCategory,
         addFilterRating,
         filter,
+        addFilterSortPrice,
       } = useContext(CartContext);
     return ( 
         <main>
@@ -71,7 +72,28 @@ const FilterComponent = () => {
           1 Stars & above
         </label>
       </section>
-      
+      <section>
+      <label>
+          <input
+            type="radio"
+            name="sortby"
+            value="LOW_TO_HIGH"
+            onChange={(e) => addFilterSortPrice(e)}
+            checked={filter.sortby === "LOW_TO_HIGH"}
+          />{" "}
+          Price-Low to High
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="sortby"
+            value="HIGH_TO_LOW"
+            onChange={(e) => addFilterSortPrice(e)}
+            checked={filter.sortby === "HIGH_TO_LOW"}
+          />{" "}
+          Price-High to Low
+        </label>
+      </section>
         </main>
     )
 }

@@ -9,6 +9,8 @@ const CartContextProvider = ({ children }) => {
       category: [],
       userRating: null,
       searchQuery: "",
+      sortby: null,
+      price: 50000,
     },
   });
 
@@ -23,6 +25,11 @@ const CartContextProvider = ({ children }) => {
   const addFilterQuery = (e) => {
     dispatch({ type: "FILTER_SEARCH_QUERY", payload: e.target.value });
   };
+  const addFilterSortPrice = (e) => {
+    if (e.target.checked) {
+      dispatch({ type: "FILTER_SORT_PRICE", payload: e.target.value });
+    }
+  };
 
   return (
     <CartContext.Provider
@@ -30,6 +37,7 @@ const CartContextProvider = ({ children }) => {
         addFilterCategory,
         addFilterRating,
         addFilterQuery,
+        addFilterSortPrice,
         filter: cartData.filter,
       }}
     >

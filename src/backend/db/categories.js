@@ -30,7 +30,7 @@ export const categories = [
   },
   {
     _id: uuid(),
-    categoryName: "Gadgets",
+    categoryName: "gadgets",
     description: "Gadgets Collection",
     categoryImage:
       "https://i.ibb.co/W2cSP4y/Several-smart-phones-with-large-touch-screens-and-two-digital-tablets-are-placed-in-a-pile-All-brand.jpg",

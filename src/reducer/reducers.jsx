@@ -33,7 +33,10 @@
           ...prevState,
           filter: { ...prevState.filter, searchQuery: payload },
         };
-
+        case "FILTER_SORT_PRICE":
+      return { ...prevState, filter: { ...prevState.filter, sortby: payload } };
+      case "FILTER_PRICE":
+        return { ...prevState, filter: { ...prevState.filter, price: payload } };
     default:
        return prevState;
     }

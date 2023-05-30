@@ -8,7 +8,14 @@ const ProductListingPage = () => {
   const { filter } = useContext(CartContext);
   const { products } = useContext(ProductContext);
   const applyFilter = () => {
-    const { category, userRating, searchQuery } = filter;
+    const { category, userRating, searchQuery,sortby,price } = filter;
+
+    const sortOrder = (order) => {
+        if (order === "LOW_TO_HIGH")
+          return (a, b) => a.originalPrice - b.originalPrice;
+        else return (a, b) => b.originalPrice - a.originalPrice;
+      };
+
     let filteredCategory = products;
     if (category.length !== 0) {
       filteredCategory = products.filter(({ categoryName }) =>
@@ -24,7 +31,15 @@ const ProductListingPage = () => {
     let filteredSearch = filteredRating.filter(({ title }) =>
       title.toLowerCase().includes(searchQuery.toLowerCase().trim())
     );
-    return filteredSearch;
+    let filteredPrice = filteredSearch.filter(
+        ({ originalPrice }) => originalPrice <= price
+      );
+  
+      let filteredSorted = filteredPrice;
+      if (sortby) {
+        filteredSorted = filteredPrice.sort(sortOrder(sortby));
+      }
+         return filteredSorted;
   };
   const displayProduct = applyFilter();
   return (
@@ -32,7 +47,7 @@ const ProductListingPage = () => {
       <FilterComponent />
       {products.length === 0 ? (
         <div>
-          We are fixing our Database till then look at Flipkart or Amazon
+          We are fixing our Database till then look at FlipKart or Amazon
         </div>
       ) : (
         <div>
@@ -42,7 +57,7 @@ const ProductListingPage = () => {
               We are fixing our Database till then look at FlipKart or Amazon
             </div>
           ) : (
-            <ul className="flex-wrap">
+            <ul className="product-card-container">
               {displayProduct.map((product) => {
                 return (
                   <li key={product._id}>
