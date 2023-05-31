@@ -13,7 +13,9 @@ const ProductListingPage = () => {
         const sortOrder = (order) => {
             if (order === "LOW_TO_HIGH")
                 return (a, b) => a.originalPrice - b.originalPrice;
-            else return (a, b) => b.originalPrice - a.originalPrice;
+            else 
+                return (a, b) => b.originalPrice - a.originalPrice;
+            
         };
 
         let filteredCategory = products;
@@ -41,18 +43,18 @@ const ProductListingPage = () => {
         }
         return filteredSorted;
     };
-    const displayProduct = applyFilter();
+    const displayAllProducts = applyFilter();
     return (
         <div>
 
-            {displayProduct.length === 0 ? (
+            {displayAllProducts.length === 0 ? (
                 <div className="flex-col-center fw-600 mt-5">
                     We are fixing our Database till then look at FlipKart or Amazon
                     <p> (use {">>"}clear filter) </p>
                 </div>
             ) : (
                 <ul className="product-card-container">
-                    {displayProduct.map((product) => {
+                    {displayAllProducts.map((product) => {
                         return (
                             <li key={product._id}>
                                 <ProductCard product={product} />

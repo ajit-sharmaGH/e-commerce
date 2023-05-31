@@ -21,9 +21,9 @@ const Home = () => {
     addFilterCategory(category);
     navigate("/products");
   };
-  const navigateToProducts=()=>{
-navigate("/products");
-  }
+  const navigateToProducts = () => {
+    navigate("/products");
+  };
 
   const homeBgImg = "https://i.ibb.co/bQHd3Sd/intro-bg-1.jpg";
   return (
@@ -59,8 +59,7 @@ navigate("/products");
                     className="category-img"
                     alt="photo_hai"
                   />
-                  <p className="flex-center"
->{description}</p>
+                  <p className="flex-center">{description}</p>
                 </li>
               );
             }
