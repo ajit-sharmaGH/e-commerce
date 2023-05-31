@@ -21,6 +21,9 @@ const Home = () => {
     addFilterCategory(category);
     navigate("/products");
   };
+  const navigateToProducts=()=>{
+navigate("/products");
+  }
 
   const homeBgImg = "https://i.ibb.co/bQHd3Sd/intro-bg-1.jpg";
   return (
@@ -34,8 +37,8 @@ const Home = () => {
             <h3 className="mb-1 fw-600">We Sell LIFESTYLE</h3>
             <span>Flat 30% off</span>
             <div className="landing-page-button-container mt-1">
-              <button onClick={handleScroll}>Shop Now</button>
-              <button>Our Services</button>
+              <button onClick={navigateToProducts}>Shop Now</button>
+              <button onClick={handleScroll}>Our Services</button>
             </div>
           </div>
         </div>

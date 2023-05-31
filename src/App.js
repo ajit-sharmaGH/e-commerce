@@ -2,7 +2,7 @@ import "./index.css";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./components/home/landing-page";
 import { Navbar } from "./components/navbar/navbar";
-import { ProductListingPage } from "./pages/productListing";
+import { FilterProductListing } from "./pages/filterProductPage";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<ProductListingPage/>}/>
+          <Route path="/products" element={<FilterProductListing/>}/>
         </Routes>
     </>
   );

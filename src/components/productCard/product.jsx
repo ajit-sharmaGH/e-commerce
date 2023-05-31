@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
     return (
         <>
             {product.inStock ? (
-            <main key={product._id} className="product-card margin-1">
+            <main key={product._id} className="product-card margin-half">
                 <div className="card-image">
                
                     <span>

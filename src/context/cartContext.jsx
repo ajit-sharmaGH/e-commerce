@@ -29,8 +29,15 @@ const CartContextProvider = ({ children }) => {
     if (e.target.checked) {
       dispatch({ type: "FILTER_SORT_PRICE", payload: e.target.value });
     }
+   
   };
-
+  const addFilterRange = (e) => {
+    dispatch({ type: "FILTER_PRICE", payload: Number(e.target.value) });
+  };
+  const clearFilter = (e) => {
+    dispatch({ type: "CLEAR_FILTER", payload: {} });
+    e.preventDefault();
+  };
   return (
     <CartContext.Provider
       value={{
@@ -38,6 +45,9 @@ const CartContextProvider = ({ children }) => {
         addFilterRating,
         addFilterQuery,
         addFilterSortPrice,
+        addFilterRange,
+        clearFilter,
+        range: cartData.filter.price,
         filter: cartData.filter,
       }}
     >
