@@ -22,6 +22,7 @@
     --light-red: rgb(226, 17, 17);
     --green: green;
     --success-bg-color: #99ff99;
+    --text-green-color: #4ef84e;
     --danger-bg-color: #ff9999;
     --logo-color: #7f7fff;
     --nav-color: #333;
@@ -258,6 +259,14 @@ li {
 
 .fw-800 {
     font-weight: 800;
+}
+
+.fs-small {
+    font-size: 13px;
+}
+
+.fs-extra-small {
+    font-size: 18px;
 }
 
 

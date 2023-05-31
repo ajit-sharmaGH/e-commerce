@@ -14,7 +14,7 @@ export const products = [
     originalPrice: 500,
     productImage:
       "https://i.ibb.co/C82sGMs/Earphones-with-neck-guitar-in-the-studio.jpg",
-    productDescription: ` `,
+    productDescription: "Advance headphone suitable and best fitted to the khopadi of every individual must try once and be addicted to it ",
     categoryName: "gadgets",
     ratingSign: "⭐⭐⭐",
     rating: 3.5,
@@ -31,7 +31,7 @@ export const products = [
     originalPrice: 700,
     productImage:
       "https://i.ibb.co/wz1Hs4b/A-Bluetooth-headset-blue-color-isolated-on-white-background-closeup-shot.jpg",
-    productDescription: ` `,
+      productDescription: "Advance Earphone suitable and flexible to the ear of must, it has dolby  sound quality  ",
     categoryName: "gadgets",
     ratingSign: "⭐⭐⭐⭐",
     rating: 4.5,
@@ -47,7 +47,7 @@ export const products = [
     originalPrice: 900,
     productImage:
       "https://i.ibb.co/DgNjp7D/woman-accessories-closeup-shiny-gold-women-wristwatch.jpg",
-    productDescription: ` `,
+      productDescription: "Advance and modern wrist watch, it keeps you ahead of your time, suitable of ladies only",
     categoryName: "gadgets",
    
     ratingSign: "⭐⭐",
@@ -65,7 +65,7 @@ export const products = [
     originalPrice: 1000,
     productImage:
       "https://i.ibb.co/h7WRyzM/Stylish-business-clothing-for-businessman-Men-s-clothing-on-a-wooden-background.jpg",
-    productDescription: ` `,
+      productDescription: "Mast quality threads, comfort in summer and winter but not in rain",
     categoryName: "menWear",
     ratingSign: "⭐⭐⭐",
     rating: 3.5,
@@ -81,7 +81,7 @@ export const products = [
     originalPrice: 800,
     productImage:
       "https://i.ibb.co/tLDzkxW/Mens-suits-in-different-colors-hanging-on-hanger-in-a-retail-clothes-store-close-up.jpg",
-    productDescription: ` `,
+      productDescription: "Mast quality threads used, comfort in summer and winter but not in rain",
     trending:true,
 
     categoryName: "menWear",
@@ -100,7 +100,7 @@ export const products = [
     originalPrice: 1200,
     productImage:
       "https://i.ibb.co/s2vVtLz/Fashion-portrait-of-a-handsome-young-businessman.jpg",
-    productDescription: ` `,
+      productDescription: "Mast quality threads used, comfort in summer and winter but not in rain",
     categoryName: "menWear",
     ratingSign: "⭐⭐⭐⭐",
     rating: 4.5,
@@ -118,7 +118,7 @@ export const products = [
     originalPrice: 9000,
     productImage:
       "https://i.ibb.co/pPNq5Jc/Child-girl-collage-clothes-colorful-isolated-on-white-Kid-s-female-apparel-cotton-Set-of-summer-brig.jpg",
-    productDescription: ` `,
+      productDescription: "Mast quality threads used, comfort in summer and winter but not in rain",
     categoryName: "kidsWear",
     ratingSign: "⭐⭐⭐⭐",
     rating: 4.5,
@@ -135,7 +135,7 @@ export const products = [
     originalPrice: 4000,
     productImage:
       "https://i.ibb.co/swSqwvb/portrait-of-positive-russian-woman-and-girl-shopping-kids-apparel-in-clothes-store.jpg",
-    productDescription: ` `,
+      productDescription: "Mast quality threads used, comfort in summer and winter but not in rain",
     categoryName: "kidsWear",
     ratingSign: "⭐",
     rating: 1.5,
@@ -152,7 +152,7 @@ export const products = [
     originalPrice: 300,
     productImage:
       "https://i.ibb.co/8Mt2MDn/Eco-baby-clothes-and-accessories-concept-Wooden-toy-clothes-and-shoes-on-green-background-with-blank.jpg",
-    productDescription: ` `,
+      productDescription: "This is magical clothes for kids, buy it for them and they are not going to cry for the rest of their life ",
     categoryName: "kidsWear",
     ratingSign: "⭐⭐⭐⭐",
     rating: 4.9,
@@ -170,7 +170,7 @@ export const products = [
     originalPrice: 250,
     productImage:
       "https://i.ibb.co/yQSvMh6/School-supplies-on-green-background.jpg",
-    productDescription: ` `,
+      productDescription: "This is the magical geometry box, ask it to build another planet like earth and you will get it asap ",
     categoryName: "gadgets",
     ratingSign: "⭐⭐",
     rating: 2.5,
@@ -186,7 +186,7 @@ export const products = [
     discountPrice: 90,
     originalPrice: 600,
     productImage: "https://i.ibb.co/5hbhdCK/1.jpg",
-    productDescription: ` `,
+    productDescription: "Just amazing and wonderful camera you can watch it only here on monitor screen, no one can touch it nor use it",
     categoryName: "gadgets",
     ratingSign: "⭐",
     rating: 1.5,
@@ -203,7 +203,7 @@ export const products = [
     originalPrice: 650,
     productImage:
       "https://i.ibb.co/4fG8TkD/Two-young-women-choosing-dresses-in-a-luxury-fashion-store.jpg",
-    productDescription: ` `,
+    productDescription: "Special Clothes recent launched into the market ",
     categoryName: "womenWear",
     ratingSign: "⭐⭐⭐",
     rating: 3.5,
@@ -219,7 +219,7 @@ export const products = [
     discountPrice: 10,
     originalPrice: 650,
     productImage: "https://i.ibb.co/9b0JHS5/Luxury-handbags.jpg",
-    productDescription: ` `,
+    productDescription: "Wonderful bag for Papa Ki Pariyan, just keep money in it and here it goes to double",
     categoryName: "womenWear",
     ratingSign: "⭐⭐",
     rating: 2.5,
@@ -235,6 +235,7 @@ export const products = [
     discountPrice: 100,
     originalPrice: 5000,
     productImage:"https://i.ibb.co/gdH00y9/Indian-Made-Men-s-Shoe-Isolated-on-Gray.jpg",
+    productDescription: "Special shoes this is the same shoes which Thakur from Sholay used to wear it , don't worry we have removed the pin from its sole ",
     categoryName: "menWear",
     ratingSign: "⭐⭐⭐",
     rating: 3.5,
