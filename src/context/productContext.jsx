@@ -12,7 +12,6 @@ const ProductContextProvider = ({ children }) => {
     try {
       const categoryData = await (await fetch("/api/categories")).json();
       dispatch({ type: "SET_CATEGORY", payload: categoryData.categories });
-
       const productData = await (await fetch("/api/products")).json();
       dispatch({ type: "SET_PRODUCT", payload: productData.products });
     } catch (err) {
@@ -25,7 +24,7 @@ const ProductContextProvider = ({ children }) => {
   }, []);
 
   const productDetails = (productId) => {
-    return productData.find(({ _id }) => _id === productId);
+    return productData.products.find(({ _id }) => _id === productId);
   };
 
   return (
@@ -40,5 +39,4 @@ const ProductContextProvider = ({ children }) => {
     </ProductContext.Provider>
   );
 };
-
 export { ProductContextProvider, ProductContext };

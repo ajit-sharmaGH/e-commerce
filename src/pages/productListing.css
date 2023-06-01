@@ -1,0 +1,17 @@
+.filter-component-second {
+    position: fixed;
+    /* margin-top: 4.5rem; */
+}
+
+.productListing-component {
+    height: 100vh;
+    width: calc(100% - 15rem);
+    margin-left: auto;
+}
+
+.product-card-container {
+    margin-top: 4.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-rows: repeat(auto-fill, 1fr);
+}

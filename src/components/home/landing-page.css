@@ -4,6 +4,7 @@
     background-position: center;
     max-height: 100vh;
     width: 100%;
+    margin-top: 4.5rem;
 }
 
 .landing-page-container {
@@ -42,7 +43,7 @@
     letter-spacing: 1px;
 }
 
-.landing-page-button-container button:nth-child(1) {
+.landing-page-button-container :nth-child(1) {
     background-color: var(--red);
     color: var(--primary-bg-color);
     width: 7rem;

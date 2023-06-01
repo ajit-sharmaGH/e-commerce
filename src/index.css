@@ -22,6 +22,7 @@
     --light-red: rgb(226, 17, 17);
     --green: green;
     --success-bg-color: #99ff99;
+    --text-green-color: #4ef84e;
     --danger-bg-color: #ff9999;
     --logo-color: #7f7fff;
     --nav-color: #333;
@@ -34,6 +35,7 @@
     --text-color: #282828;
     --hotpink: hotpink;
     --transparent-black: #000001ab;
+    --transparent-light-black: #00000194;
     --color-off-white: #5a5a5a;
     --barcelona-red: #C3023A;
     --barcelona-blue: #054C96;
@@ -259,6 +261,14 @@ li {
     font-weight: 800;
 }
 
+.fs-small {
+    font-size: 13px;
+}
+
+.fs-extra-small {
+    font-size: 18px;
+}
+
 
 /*margin in rem unit*/
 
@@ -352,6 +362,10 @@ li {
 
 .mt-4 {
     margin-top: 4rem;
+}
+
+.mt-5 {
+    margin-top: 5rem;
 }
 
 .mb-4 {

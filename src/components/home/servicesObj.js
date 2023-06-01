@@ -22,6 +22,4 @@ const services = [{
         imgLink: "https://i.ibb.co/GJZjxMX/Gold-and-silver-stars-on-white-background.jpg",
     },
 ];
-export {
-    services
-};
+export { services };

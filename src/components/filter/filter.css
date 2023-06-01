@@ -1,0 +1,45 @@
+.filter-component {
+    margin-top: 4.5rem;
+    box-shadow: 3px 4px 10px var(--dark);
+    padding: 1rem;
+    height: calc(100vh - 4.5rem);
+    min-width: 15rem;
+    border: 1px solid var(--dark);
+    overflow: auto;
+}
+
+.filter-category-container li,
+.filter-price-sort-container li,
+.filter-rating-container li {
+    margin: 0.5rem;
+}
+
+.filter-component h3 {
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+.filter-component legend {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin: 0 1rem;
+    font-weight: 600;
+}
+
+.filter-component button {
+    /* border: 1px solid var(--logo-color); */
+    font-family: cursive;
+    color: var(--transparent-black);
+    background-color: var(--white);
+    font-size: 15px;
+    margin: -2rem 0 0 6.5rem;
+}
+
+filter-component button {
+    /* border: 1px solid var(--logo-color); */
+    font-family: cursive;
+    color: var(--transparent-black);
+    background-color: var(--white);
+    font-size: 15px;
+    margin-left: 5rem;
+}
