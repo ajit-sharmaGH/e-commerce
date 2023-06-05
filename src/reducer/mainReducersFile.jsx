@@ -47,6 +47,13 @@ const cartReducer = (prevState, { type, payload }) => {
           price: 50000,
         },
       };
+      case "ADD_TO_WISHLIST":
+        return {
+          ...prevState,
+          wishlist: prevState.wishlist.find(({ _id }) => _id === payload._id)
+            ? prevState.wishlist.filter(({ _id }) => payload._id !== _id)
+            : [...prevState.wishlist, payload],
+        };
 
     default:
       return prevState;

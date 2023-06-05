@@ -1,6 +1,6 @@
 // import { FilterComponent } from "../components/filter/filter";
 import { ProductCard } from "../components/productCard/product";
-import { CartContext } from "../context/cartContext";
+import { CartContext } from "../context/mainContext";
 import { ProductContext } from "../context/productContext";
 import "./productListing.css";
 import { useContext } from "react";
