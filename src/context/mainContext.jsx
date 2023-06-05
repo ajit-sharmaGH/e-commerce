@@ -14,30 +14,6 @@ const CartContextProvider = ({ children }) => {
             price: 50000,
         },
     });
-    //   const getCartData = async () => {
-    //     try {
-    //       const token = localStorage.getItem("token");
-    //       const auth = {
-    //         authorization: token,
-    //       };
-
-    //       const responseWishlist = await (
-    //         await fetch("/api/user/wishlist", {
-    //           method: "GET",
-    //           headers: auth,
-    //         })
-    //       ).json();
-
-    //       if (responseWishlist.status === 200) {
-    //         dispatch({
-    //           type: "ADD_TO_WISHLIST",
-    //           payload: responseWishlist.wishlist,
-    //         });
-    //       }
-    //     } catch (err) {
-    //       console.error(err);
-    //     }
-    //   };
 
     const addToWishList = async(userProduct) => {
         try {
@@ -129,8 +105,7 @@ const CartContextProvider = ({ children }) => {
                 filter: cartData.filter,
                 wishlist: cartData.wishlist
             }
-        } >
-        { children } <
+        } > { children } <
         /CartContext.Provider>
     );
 };

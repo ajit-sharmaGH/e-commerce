@@ -4,10 +4,6 @@ import { AuthContext } from "../context/authContext";
 const ProfilePage = ()=>{
 
     const { user, logoutHandler } = useContext(AuthContext);
-
-//   const abstractLogoutHandler = () => {
-//     logoutHandler();
-//   };
     return (
         <>
         <div className="profile-container">
