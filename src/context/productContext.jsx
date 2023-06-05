@@ -1,5 +1,5 @@
 import { createContext, useEffect, useReducer } from "react";
-import { productReducer } from "../reducer/reducers";
+import { productReducer } from "../reducer/mainReducersFile";
 const ProductContext = createContext();
 
 const ProductContextProvider = ({ children }) => {
