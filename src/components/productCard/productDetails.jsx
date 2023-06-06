@@ -2,9 +2,15 @@ import "./product.css";
 import { useParams } from "react-router";
 import { ProductContext } from "../../context/productContext";
 import { useContext } from "react";
+import { AuthContext } from "../../context/authContext";
+import { useNavigate } from "react-router-dom";
+import { WishlistContext } from "../../context/wishlistContext";
 const ProductDetails = () => {
   const { productId } = useParams();
+  const navigate = useNavigate();
   const { productDetails } = useContext(ProductContext);
+  const { toggleWishlist, wishlist } = useContext(WishlistContext);
+  const { checkLogin } = useContext(AuthContext);
   const product = productDetails(productId);
   const {
     _id,
@@ -17,6 +23,14 @@ const ProductDetails = () => {
     inStock,
     trending,
   } = product;
+
+  const moveToWishlist = (product) => {
+    if (checkLogin()) {
+      toggleWishlist(product);
+    } else {
+      navigate("/login");
+    }
+  };
 
   return (
     <>
@@ -50,8 +64,13 @@ const ProductDetails = () => {
           ) : (
             <p className="inStock-false">Out Of Stock</p>
           )}
-          <button> Add to Wishlist</button>
-          <button>Add to Cart </button>
+          <button onClick={() => moveToWishlist(product)}>
+            {" "}
+            {wishlist.find((item)=>item._id===_id) 
+              ? "Remove From Wishlist"
+              : "Add to Wishlist"}{" "}
+          </button>
+          <button> Add to Cart </button>
         </div>
       </div>
     </>

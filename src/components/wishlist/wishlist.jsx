@@ -1,10 +1,12 @@
 
-import { CartContext } from "../../context/mainContext";
 import { useContext } from "react";
 import { ProductCard } from "../productCard/product";
 import "./wishlist.css";
+import { WishlistContext } from "../../context/wishlistContext";
 const WishlistComponent = ()=>{
-    const {wishlist} = useContext(CartContext)
+    const {wishlist} = useContext(
+        WishlistContext
+    )
     return (<>
         <div className="wishlist-container mt-5">
           <h2 className="ml-1">My Wishlist</h2>

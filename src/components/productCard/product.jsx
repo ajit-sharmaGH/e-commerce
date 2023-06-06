@@ -6,12 +6,12 @@ import {
   AiFillHeart,
 } from "react-icons/ai";
 import { AuthContext } from "../../context/authContext";
-import { CartContext } from "../../context/mainContext";
 import { useLocation, useNavigate } from "react-router";
+import { WishlistContext } from "../../context/wishlistContext";
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const { checkLogin } = useContext(AuthContext);
-  const { isProductInWishlist, toggleWishlist } = useContext(CartContext);
+  const { isProductInWishlist, toggleWishlist } = useContext(WishlistContext);
   const { location } = useLocation();
   const authCheckWishlist = (product) => {
     if (checkLogin()) {

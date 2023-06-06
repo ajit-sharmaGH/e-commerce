@@ -1,11 +1,11 @@
 // import { FilterComponent } from "../components/filter/filter";
 import { ProductCard } from "../components/productCard/product";
-import { CartContext } from "../context/mainContext";
+import {  FilterContext } from "../context/filterContext";
 import { ProductContext } from "../context/productContext";
 import "./productListing.css";
 import { useContext } from "react";
 const ProductListingPage = () => {
-    const { filter } = useContext(CartContext);
+    const { filter } = useContext(FilterContext);
     const { products } = useContext(ProductContext);
     const applyFilter = () => {
         const { category, userRating, searchQuery, sortby, price } = filter;
