@@ -5,10 +5,10 @@ import { useContext } from "react";
 import { ProductContext } from "../../context/productContext";
 import { useNavigate } from "react-router-dom";
 import { services } from "./servicesObj";
-import { CartContext } from "../../context/mainContext";
+import {  FilterContext } from "../../context/filterContext";
 const Home = () => {
   const { categories } = useContext(ProductContext);
-  const { addFilterCategory } = useContext(CartContext);
+  const { addFilterCategory } = useContext(FilterContext);
   const navigate = useNavigate();
   const handleScroll = () => {
     window.scrollTo({

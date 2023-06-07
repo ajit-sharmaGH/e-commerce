@@ -1,6 +1,5 @@
 import "./navbar.css";
 import { useContext } from "react";
-import { CartContext } from "../../context/mainContext";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
 import {
@@ -9,9 +8,12 @@ import {
   AiOutlineUserAdd,
 } from "react-icons/ai";
 import { FcSearch } from "react-icons/fc";
+import { WishlistContext } from "../../context/wishlistContext";
+import { FilterContext } from "../../context/filterContext";
 const Navbar = () => {
   const { checkLogin } = useContext(AuthContext);
-  const { addFilterQuery } = useContext(CartContext);
+  const { addFilterQuery,} = useContext(FilterContext);
+  const { wishlistCounter , wishlist} = useContext(WishlistContext);
   const navigate = useNavigate();
   const searchHandler = (e) => {
     navigate("/products");
@@ -40,8 +42,9 @@ const Navbar = () => {
         ) : (
           <li onClick={() => navigate("/login")} className="cursor fw-500">Login</li>
         )}
-        <li>
-          <AiOutlineHeart onClick={() => navigate("/wishlist")} />
+        <li className="navbar-wishlist-icon cursor"  onClick={() => navigate("/wishlist")} >
+          <AiOutlineHeart />
+          {wishlist.length !==0 &&<small> {wishlistCounter}</small>}
         </li>
         <li>
           <AiOutlineShoppingCart />

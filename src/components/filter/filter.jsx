@@ -1,7 +1,7 @@
 
 import { useContext } from "react";
 import "./filter.css"
-import { CartContext } from "../../context/mainContext";
+import { FilterContext } from "../../context/filterContext";
 const FilterComponent = () => {
 
     const {
@@ -13,7 +13,7 @@ const FilterComponent = () => {
         addFilterSortPrice,
         addFilterRange,
 
-    } = useContext(CartContext);
+    } = useContext(FilterContext);
     return (
         <fieldset className="filter-component">
             <legend>Filter</legend>
@@ -21,18 +21,18 @@ const FilterComponent = () => {
             <button onClick={(e) => clearFilter(e)}>Clear Filter</button>
             <h3 className="margin-half">Price Range</h3>
             <ul className="mt-1 ml-1">
-                
+
                 <li>
-                <p> {range} </p>
+                    <p> {range} </p>
                     <input type="range" name="range" value={range} min={100} step={100}
-                    onChange={(e) => addFilterRange(e)}
-                    max={50000} />
-                   
+                        onChange={(e) => addFilterRange(e)}
+                        max={50000} />
+
                 </li>
             </ul>
             <h3 className="mt-1">Filter Category</h3>
             <ul className="filter-category-container margin-1">
-           
+
 
                 <li><input type="checkbox" value="menWear"
                     name="category"
