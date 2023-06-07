@@ -12,6 +12,7 @@ import { RequiresAuth } from "./components/auth/requiresAuth";
 import { WishlistComponent } from "./components/wishlist/wishlist";
 import { MockAPI } from "./components/mockbee/mockman";
 import { ProfilePage } from "./pages/profile";
+import { CartComponent } from "./components/cart/cart";
 
 function App() {
   return (
@@ -29,6 +30,14 @@ function App() {
             <RequiresAuth>
               {" "}
               <WishlistComponent />{" "}
+            </RequiresAuth>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <RequiresAuth>
+              <CartComponent />
             </RequiresAuth>
           }
         />

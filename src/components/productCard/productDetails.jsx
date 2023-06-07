@@ -1,17 +1,20 @@
 import "./product.css";
-import { useParams } from "react-router";
+import { useParams, useLocation } from "react-router";
 import { ProductContext } from "../../context/productContext";
 import { useContext } from "react";
 import { AuthContext } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 import { WishlistContext } from "../../context/wishlistContext";
+import { CartContext } from "../../context/cartContext";
 const ProductDetails = () => {
   const { productId } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const { productDetails } = useContext(ProductContext);
   const { toggleWishlist, wishlist } = useContext(WishlistContext);
   const { checkLogin } = useContext(AuthContext);
   const product = productDetails(productId);
+  const { addToCart, cart } = useContext(CartContext);
   const {
     _id,
     title,
@@ -24,11 +27,19 @@ const ProductDetails = () => {
     trending,
   } = product;
 
+  const addToCartCheck = (product) => {
+    if (checkLogin()) {
+      addToCart(product);
+    } else {
+      navigate("/login", { state: location });
+    }
+  };
+
   const moveToWishlist = (product) => {
     if (checkLogin()) {
       toggleWishlist(product);
     } else {
-      navigate("/login");
+      navigate("/login", { state: location });
     }
   };
 
@@ -66,11 +77,25 @@ const ProductDetails = () => {
           )}
           <button onClick={() => moveToWishlist(product)}>
             {" "}
-            {wishlist.find((item)=>item._id===_id) 
+            {wishlist.find((item) => item._id === _id)
               ? "Remove From Wishlist"
               : "Add to Wishlist"}{" "}
           </button>
-          <button> Add to Cart </button>
+          
+            {inStock ? (
+            <div>
+                {cart.find((item)=>item._id===_id) ? 
+             
+             (<button onClick={()=>navigate("/cart")} className="go-to-cart">Go To Cart</button>):
+
+             (<button onClick={() => addToCartCheck(product)} className="product_details-add-to-cart-btn">Add To Cart</button>)}
+           
+            </div>):
+            
+            (<button>Not Available</button>)}
+            
+            
+          
         </div>
       </div>
     </>

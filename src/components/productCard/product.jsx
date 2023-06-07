@@ -8,11 +8,21 @@ import {
 import { AuthContext } from "../../context/authContext";
 import { useLocation, useNavigate } from "react-router";
 import { WishlistContext } from "../../context/wishlistContext";
+import { CartContext } from "../../context/cartContext";
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const { checkLogin } = useContext(AuthContext);
   const { isProductInWishlist, toggleWishlist } = useContext(WishlistContext);
+  const { addToCart, cart } = useContext(CartContext);
   const { location } = useLocation();
+
+  const authCheckCart = (product) => {
+    if (checkLogin()) {
+      addToCart(product);
+    } else {
+      navigate("/login", { state: location });
+    }
+  };
   const authCheckWishlist = (product) => {
     if (checkLogin()) {
       toggleWishlist(product);
@@ -27,9 +37,9 @@ const ProductCard = ({ product }) => {
           <div className="card-image">
             <span onClick={() => authCheckWishlist(product)}>
               {isProductInWishlist(product._id) && checkLogin() ? (
-                <AiFillHeart className="heart-icon-color"  />
+                <AiFillHeart className="heart-icon-color" />
               ) : (
-                <AiOutlineHeart/>
+                <AiOutlineHeart />
               )}
             </span>
             {product.trending && <small>Trending</small>}
@@ -61,13 +71,16 @@ const ProductCard = ({ product }) => {
             {product.ratingSign}
             <small className="small-half-rating">1/2</small>
           </p>
-          <button>
-            Add To Cart{" "}
-            <label>
-              {" "}
-              <AiOutlineShoppingCart />{" "}
-            </label>{" "}
-          </button>
+          {cart.find((item) => item._id === product._id) ? (
+            <button className="added-to-cart-btn">Added To Cart</button>
+          ) : (
+            <button
+              onClick={() => authCheckCart(product)}
+              className="add-to-cart-btn"
+            >
+              Add To Cart <AiOutlineShoppingCart />{" "}
+            </button>
+          )}{" "}
         </main>
       ) : (
         <main key={product._id} className="product-card margin-half">
@@ -80,9 +93,9 @@ const ProductCard = ({ product }) => {
             </div>
             <span onClick={() => authCheckWishlist(product)}>
               {isProductInWishlist(product._id) && checkLogin() ? (
-                <AiFillHeart className="heart-icon-color"  />
+                <AiFillHeart className="heart-icon-color" />
               ) : (
-                <AiOutlineHeart/>
+                <AiOutlineHeart />
               )}
             </span>
 
@@ -108,7 +121,7 @@ const ProductCard = ({ product }) => {
             {product.ratingSign}
             <small className="small-half-rating">1/2</small>
           </p>
-          <button>
+          <button disabled={true}>
             Add To Cart{" "}
             <label>
               {" "}

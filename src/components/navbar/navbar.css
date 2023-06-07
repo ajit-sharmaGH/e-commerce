@@ -56,10 +56,12 @@
     font-size: 1.65rem;
 }
 
+.navbar-cart-icon,
 .navbar-wishlist-icon {
     position: relative;
 }
 
+.navbar-cart-icon small,
 .navbar-wishlist-icon small {
     position: absolute;
     display: flex;

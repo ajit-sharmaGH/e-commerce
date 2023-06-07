@@ -10,10 +10,12 @@ import {
 import { FcSearch } from "react-icons/fc";
 import { WishlistContext } from "../../context/wishlistContext";
 import { FilterContext } from "../../context/filterContext";
+import { CartContext } from "../../context/cartContext";
 const Navbar = () => {
   const { checkLogin } = useContext(AuthContext);
   const { addFilterQuery,} = useContext(FilterContext);
   const { wishlistCounter , wishlist} = useContext(WishlistContext);
+  const {cart, cartCounter} = useContext(CartContext);
   const navigate = useNavigate();
   const searchHandler = (e) => {
     navigate("/products");
@@ -44,10 +46,11 @@ const Navbar = () => {
         )}
         <li className="navbar-wishlist-icon cursor"  onClick={() => navigate("/wishlist")} >
           <AiOutlineHeart />
-          {wishlist.length !==0 &&<small> {wishlistCounter}</small>}
+          {wishlist.length !==0 && <small> {wishlistCounter}</small>}
         </li>
-        <li>
+        <li onClick={()=>navigate("/cart")} className="navbar-cart-icon cursor">
           <AiOutlineShoppingCart />
+          {cart.length !==0 && <small> {cartCounter} </small>}
         </li>
         <li>
           <AiOutlineUserAdd
