@@ -48,6 +48,8 @@ const CartContextProvider = ({ children }) => {
         }
     };
     
+   
+     
     const isProductInCart = (productId) => {
         return cartState.cart.find(({ _id }) => _id === productId);
     };
@@ -59,9 +61,9 @@ const CartContextProvider = ({ children }) => {
                 addToCart,
                 removeFromCart,
                 isProductInCart,
-              
+                dispatch,
                 cart: cartState.cart,
-                cartCounter: cartState.cartCounter
+                cartCounter: cartState.cartCounter,
             }}
         >
             {children}

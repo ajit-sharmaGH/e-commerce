@@ -1,97 +1,41 @@
-.cart-body-container {
-    background-color: var(--dark-primary-text);
-    padding-top: 1.5rem;
-    min-height: 100vh;
+.price-card-container {
+    font-weight: 500;
+    min-width: 35%;
+    box-shadow:1px 3px 4px 0px var(--dark);
+    height: fit-content;
+    padding: 10px;
 }
 
-.cart-heading {
+.price-card-heading {
     font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--dark-tertiary);
-}
-
-.cart-product-container {
-    border-radius: 0.5rem;
-    margin: 1rem 0.3rem;
-    min-width: 18rem;
-    background-color: var(--secondary-bg-color);
-}
-
-.cart_button {
-    margin: 0.5rem 0;
-}
-
-.cart_images {
-    margin: 5px;
-    width: 15rem;
-    max-height: 15rem;
-}
-
-.cart_products-detail {
-    margin: 0 0.5rem;
-}
-
-.cart_original-pricing {
     font-weight: 600;
-    font-size: 1.1rem;
+    color: var(--dark-primary);
+    text-align: center;
+    border-bottom: 2px solid var(--blueviolet);
+    padding:0px 0 10px 0;
 }
 
-.cart_discount-pricing {
-    font-weight: 400;
-    color: var(--dark);
+.price-card-container p {
+    margin: 10px 0;
 }
 
-.cart_rating {
-    font-weight: 600;
-    color: var(--hotpink);
+
+.price-card_product-info {
+    border-bottom: 1px solid var(--dark);
 }
 
-.order_details-container {
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    overflow: none;
-    min-width: 20rem;
-    margin: 1rem 0.3rem 1rem 1rem;
+.price-card-container button {
     border: 2px solid var(--blueviolet);
-    background-color: var(--secondary-bg-color);
+    color: var(--blueviolet);
+    background-color: var(--white);
+    margin: 0;
+    font-family: sans-serif;
 }
 
-.price-tag {
-    margin-right: auto;
-}
-
-.hr-tag {
-    margin-top: 5px;
-    padding: 0.5px;
-    background-color: var(--primary);
-}
-
-.order-btn {
-    margin: 1rem 0;
-}
-
-.price,
-.discount,
-.delivery-charge,
-.total-amount {
-    margin-top: 0.5rem;
+.price-card-total-price {
+    border-top: 2px solid var(--blueviolet);
+    padding: 10px 0;
     font-weight: 600;
-}
-
-.total-amount {
-    font-weight: 800;
-}
-
-.quantity-showing {
-    margin: 0rem 0.5rem;
-}
-
-@media screen and (max-width:768px) {
-    .cart_images {
-        margin: 5px;
-        width: 10rem;
-    }
-    .cart-body-container {
-        padding-top: 4.5rem;
-    }
+    font-size: 1.3rem;
+    font-family: sans-serif;
 }

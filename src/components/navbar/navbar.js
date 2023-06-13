@@ -46,11 +46,11 @@ const Navbar = () => {
         )}
         <li className="navbar-wishlist-icon cursor"  onClick={() => navigate("/wishlist")} >
           <AiOutlineHeart />
-          {wishlist.length !==0 && <small> {wishlistCounter}</small>}
+          {wishlist.length !==0 && checkLogin() && <small> {wishlistCounter}</small>}
         </li>
         <li onClick={()=>navigate("/cart")} className="navbar-cart-icon cursor">
           <AiOutlineShoppingCart />
-          {cart.length !==0 && <small> {cartCounter} </small>}
+          {cart.length !==0 && checkLogin() &&<small> {cartCounter} </small>}
         </li>
         <li>
           <AiOutlineUserAdd
