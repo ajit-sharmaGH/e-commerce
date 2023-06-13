@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const CartProductCard = ({ product }) => {
   const { checkLogin } = useContext(AuthContext);
   const { toggleWishlist, wishlist } = useContext(WishlistContext);
-  const { removeFromCart, dispatch , cart} = useContext(CartContext);
+  const { removeFromCart, dispatch, cart } = useContext(CartContext);
   const navigate = useNavigate();
   const {
     _id,
@@ -16,7 +16,7 @@ const CartProductCard = ({ product }) => {
     productImage,
     originalPrice,
     discountPrice,
-    quantity
+    quantity,
   } = product;
   const moveToWishlist = (product) => {
     if (checkLogin()) {
@@ -28,18 +28,18 @@ const CartProductCard = ({ product }) => {
 
   const decreaseQuantity = (item) => {
     const product = cart.find((data) => data._id === item);
-    if (product.quantity > 1){
+    if (product.quantity > 1) {
       dispatch({
         type: "DECREASE_QUANTITY",
-        payload:{value:item},
+        payload: { value: item },
       });
     }
-    }
+  };
 
   const increaseQuantity = (item) => {
     dispatch({
       type: "INCREASE_QUANTITY",
-      payload:{value:item},
+      payload: { value: item },
     });
   };
 
@@ -58,9 +58,7 @@ const CartProductCard = ({ product }) => {
           </li>
           <li> {rating} ⭐ </li>
           <li>
-            <button 
-            onClick={() => decreaseQuantity(_id)}
-            >-</button>
+            <button onClick={() => decreaseQuantity(_id)}>-</button>
             <small className="quantity-update fw-600">{quantity}</small>
             <button onClick={() => increaseQuantity(_id)}>+</button>
           </li>

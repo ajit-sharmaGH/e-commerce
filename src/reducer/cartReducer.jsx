@@ -4,7 +4,7 @@ const cartReducer = (prevState, { type, payload }) => {
       return {
         ...prevState,
         cartCounter: prevState.cartCounter + 1,
-        cart: [...prevState.cart, {...payload,   quantity: 1 }],
+        cart: [...prevState.cart, { ...payload, quantity: 1 }],
       };
 
     case "REMOVE_FROM_CART":

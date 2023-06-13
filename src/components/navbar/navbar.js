@@ -13,9 +13,9 @@ import { FilterContext } from "../../context/filterContext";
 import { CartContext } from "../../context/cartContext";
 const Navbar = () => {
   const { checkLogin } = useContext(AuthContext);
-  const { addFilterQuery,} = useContext(FilterContext);
-  const { wishlistCounter , wishlist} = useContext(WishlistContext);
-  const {cart, cartCounter} = useContext(CartContext);
+  const { addFilterQuery } = useContext(FilterContext);
+  const { wishlistCounter, wishlist } = useContext(WishlistContext);
+  const { cart, cartCounter } = useContext(CartContext);
   const navigate = useNavigate();
   const searchHandler = (e) => {
     navigate("/products");
@@ -40,17 +40,29 @@ const Navbar = () => {
       </span>
       <ul className="navbar-lists">
         {checkLogin() ? (
-          <li onClick={() => navigate("/products")} className="cursor fw-500">Shop</li>
+          <li onClick={() => navigate("/products")} className="cursor fw-500">
+            Shop
+          </li>
         ) : (
-          <li onClick={() => navigate("/login")} className="cursor fw-500">Login</li>
+          <li onClick={() => navigate("/login")} className="cursor fw-500">
+            Login
+          </li>
         )}
-        <li className="navbar-wishlist-icon cursor"  onClick={() => navigate("/wishlist")} >
+        <li
+          className="navbar-wishlist-icon cursor"
+          onClick={() => navigate("/wishlist")}
+        >
           <AiOutlineHeart />
-          {wishlist.length !==0 && checkLogin() && <small> {wishlistCounter}</small>}
+          {wishlist.length !== 0 && checkLogin() && (
+            <small> {wishlistCounter}</small>
+          )}
         </li>
-        <li onClick={()=>navigate("/cart")} className="navbar-cart-icon cursor">
+        <li
+          onClick={() => navigate("/cart")}
+          className="navbar-cart-icon cursor"
+        >
           <AiOutlineShoppingCart />
-          {cart.length !==0 && checkLogin() &&<small> {cartCounter} </small>}
+          {cart.length !== 0 && checkLogin() && <small> {cartCounter} </small>}
         </li>
         <li>
           <AiOutlineUserAdd

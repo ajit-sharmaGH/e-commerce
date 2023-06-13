@@ -37,33 +37,45 @@ const CartComponent = () => {
                 ))}
               </div>
               <div className="price-card-container flex-col">
-                <h1 className="price-card-heading">Price Card </h1>
+                <h1 className="price-card-heading">Order Details </h1>
                 <section className="price-card_product-info">
                   {" "}
                   {cart.map(({ title, quantity, originalPrice }) => (
                     <p className="flex-row">
                       <span className="mr-auto">
                         {" "}
-                        {title}{" "} ({quantity}x)
+                        {title} ({quantity}x)
                       </span>
-                      <span> {"₹/:"} {" "} {originalPrice * quantity} </span>
+                      <span>
+                        {" "}
+                        {"₹/:"} {originalPrice * quantity}{" "}
+                      </span>
                     </p>
                   ))}{" "}
                 </section>
                 <p className="flex-row">
                   <span className="mr-auto"> MRP : </span>
-                  <span className="fw-600"> {"₹/:"}{" "} {`${mrpCalculatedCost()}`} </span>
+                  <span className="fw-600">
+                    {" "}
+                    {"₹/:"} {`${mrpCalculatedCost()}`}{" "}
+                  </span>
                 </p>
 
                 <p className="flex-row">
                   <span className="mr-auto">Discounted Price : </span>
-                  <span> - {"₹/:"} {" "} {`${discountCalculatedCost()}`}</span>{" "}
+                  <span>
+                    {" "}
+                    - {"₹/:"} {`${discountCalculatedCost()}`}
+                  </span>{" "}
                 </p>
                 <p className="flex-row price-card-total-price">
                   <span className="mr-auto"> Total Price :</span>
-                 <span>{"₹/:"}{" "} {`${mrpCalculatedCost()}` - `${discountCalculatedCost()}`}</span> 
+                  <span>
+                    {"₹/:"}{" "}
+                    {`${mrpCalculatedCost()}` - `${discountCalculatedCost()}`}
+                  </span>
                 </p>
-                <button>Place Order</button>
+                <button>Checkout</button>
               </div>
             </div>
           </>

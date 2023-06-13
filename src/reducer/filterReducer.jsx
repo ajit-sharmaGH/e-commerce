@@ -47,7 +47,6 @@ const filterReducer = (prevState, { type, payload }) => {
           price: 50000,
         },
       };
-    
 
     default:
       return prevState;

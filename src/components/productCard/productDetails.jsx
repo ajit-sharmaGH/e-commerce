@@ -81,21 +81,28 @@ const ProductDetails = () => {
               ? "Remove From Wishlist"
               : "Add to Wishlist"}{" "}
           </button>
-          
-            {inStock ? (
-            <div>
-                {cart.find((item)=>item._id===_id) ? 
-             
-             (<button onClick={()=>navigate("/cart")} className="go-to-cart">Go To Cart</button>):
 
-             (<button onClick={() => addToCartCheck(product)} className="product_details-add-to-cart-btn">Add To Cart</button>)}
-           
-            </div>):
-            
-            (<button>Not Available</button>)}
-            
-            
-          
+          {inStock ? (
+            <div>
+              {cart.find((item) => item._id === _id) ? (
+                <button
+                  onClick={() => navigate("/cart")}
+                  className="go-to-cart"
+                >
+                  Go To Cart
+                </button>
+              ) : (
+                <button
+                  onClick={() => addToCartCheck(product)}
+                  className="product_details-add-to-cart-btn"
+                >
+                  Add To Cart
+                </button>
+              )}
+            </div>
+          ) : (
+            <button>Not Available</button>
+          )}
         </div>
       </div>
     </>
