@@ -49,8 +49,7 @@ const ProductListingPage = () => {
 
             {displayAllProducts.length === 0 ? (
                 <div className="flex-col-center fw-600 mt-5">
-                    We are fixing our Database till then look at FlipKart or Amazon
-                    <p> (use {">>"}clear filter) </p>
+                   No matching product found
                 </div>
             ) : (
                 <ul className="product-card-container">
