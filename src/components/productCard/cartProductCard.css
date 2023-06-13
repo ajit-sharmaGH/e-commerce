@@ -27,8 +27,12 @@
     font-size: 20px;
     font-weight: 600;
     margin: 0 5px;
-    border: 1px solid var(--dark);
-    padding: 3px 6px;
+    box-shadow: 1px 1px 3px  var(--black);
+    padding: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: var(--white);
 }
 
 .product-features-list li:nth-child(6) button {

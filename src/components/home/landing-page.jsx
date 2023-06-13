@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { ProductContext } from "../../context/productContext";
 import { useNavigate } from "react-router-dom";
 import { services } from "./servicesObj";
-import {  FilterContext } from "../../context/filterContext";
+import { FilterContext } from "../../context/filterContext";
 const Home = () => {
   const { categories } = useContext(ProductContext);
   const { addFilterCategory } = useContext(FilterContext);
